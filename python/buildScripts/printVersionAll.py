@@ -11,7 +11,7 @@ from branch import Branch
 from   repo import Repo
 
 # Constants used by script
-GIT_CLONE_PATH = 'ssh://git@bitbucket.org'
+GIT_CLONE_PATH = os.environ.get('GIT_CLONE_PATH') or 'ssh://git@github.com'
 CURRENT_DIR = os.getcwd()
 
 # Check number of Arguments provided by caller
